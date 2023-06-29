@@ -1,0 +1,30 @@
+＃難度： Easy
+
+＃題目說明： 
+- 給一個 linked list 檢查有沒有 cycle，若有就回傳 true，反之 false
+
+＃ Constraints
+The number of the nodes in the list is in the range [0, 10^4].
+-10^5 <= Node.val <= 10^5 
+
+＃例子
+intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+Output: Intersected at '2'
+
+＃想法
+- 用兩個指標，一快一慢，一個一次走兩步，一個一次一步
+- 如果有 cycle 形成，快的會追上慢的
+- 如果沒有 cycle 那快的就會先遇到 linked list 的結尾，出現  NULL 就說明沒有 cycle
+
+
+＃ 時間複雜度
+- 快的會跑，假設是常數倍的 O(cn)
+
+
+
+    
+
+
+ 
+
+

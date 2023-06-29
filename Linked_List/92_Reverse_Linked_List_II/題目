@@ -1,0 +1,28 @@
+＃難度： Medium
+
+＃題目說明： 
+- 給一個 linked list head 和需要反轉的 index (left, right)，回傳一個 index 範圍內反轉的 head
+
+＃ Constraints
+1 <= n <= 500
+-500 <= Node.val <= 500
+1 <= left <= right <= n
+
+＃例子
+Input: head = [1,2,3,4,5], left = 2, right = 4
+Output: [1,4,3,2,5]
+
+＃想法
+- 就反轉，或許用雙指標會更簡潔
+
+＃ 時間複雜度
+- 就是遍歷一遍 O(n)
+
+
+
+    
+
+
+ 
+
+

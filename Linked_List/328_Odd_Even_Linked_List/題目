@@ -1,0 +1,30 @@
+＃難度：Medium
+
+＃題目說明： 
+- 給一個 linked list 把奇偶元素按照，[全部奇數的 node, 全部偶數 node] 排列形成新的 linked list
+
+＃ Constraints
+The number of the nodes in the list is in the range [0, 104].
+-10^6 <= Node.val <= 10^6 
+
+＃例子
+Input: head = [2,1,3,5,6,4,7]
+Output: [2,3,6,7,1,5,4]
+
+＃想法
+- head 和 temp 兩個指標當作奇數跟偶數的起點
+- odd 和 even 兩個指標做指向操作
+
+
+＃ 時間複雜度
+- 一次會把兩個 node 定位好，所以會重複做 n/2 次
+- O(n)
+
+
+
+    
+
+
+ 
+
+

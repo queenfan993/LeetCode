@@ -1,0 +1,38 @@
+＃難度： Easy
+
+＃題目說明： 
+- 給兩個 linked list 的 head A 和 B，其中在某個節點上，A B 會相交變成同一個 list
+- 找到相交的那個點的數值（也可能不相交），那就 return NULL
+
+＃ Constraints
+The number of nodes of listA is in the m.
+The number of nodes of listB is in the n.
+1 <= m, n <= 3*10^4
+1 <= Node.val <= 10^5
+
+＃例子
+intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+Output: Intersected at '2'
+
+＃想法
+- 用兩個指標
+- 一個從 a 走到結束再從 b 開頭走
+- 另一個從 b 開頭走到結束再從 a 開頭走
+- 想法就是兩個指標要走到第二次相交點時，走的步數是一樣的
+- 例如上面的例子如果要走 listA 和 listB 就會像下面
+- [19124 3 | 24]
+  [324 191 | 24]
+- 走到第二遍 intersection "2" 的時候，都先走了六步
+
+
+＃ 時間複雜度
+- 就是遍歷一遍 O(m+n)
+
+
+
+    
+
+
+ 
+
+
