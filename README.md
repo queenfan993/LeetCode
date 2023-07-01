@@ -1,15 +1,17 @@
 # leetcode
 
 # Dynamic Programming
-5. Longest Palindromic Substring  
-62. Unique Paths  
-64. Minimum Path Sum  
-70. Climbing Stairs  
-198. House Robber  
-673. Number of Longest Increasing Subsequence  
-740. Delete and Earn  
-746. Min cost Climbing Stairs  
-1137. N-th Tribonacci Number  
+|   | Problem                    |
+|---|----------------------------|
+| 5 | Longest Palindromic Substring |
+| 62 | Unique Paths                |
+| 64 | Minimum Path Sum            |
+| 70 | Climbing Stairs             |
+| 198 | House Robber                |
+| 673 | Number of Longest Increasing Subsequence |
+| 740 | Delete and Earn             |
+| 746 | Min cost Climbing Stairs    |
+| 1137 | N-th Tribonacci Number      |
 
 # BFS
 102. Binary Tree Level Order Traversal  
