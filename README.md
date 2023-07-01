@@ -1,7 +1,7 @@
 # leetcode
 
 # Dynamic Programming
-|   | Problem                    |
+| # | Problem                    |
 |---|----------------------------|
 | 5 | Longest Palindromic Substring |
 | 62 | Unique Paths                |
@@ -14,9 +14,11 @@
 | 1137 | N-th Tribonacci Number      |
 
 # BFS
-102. Binary Tree Level Order Traversal  
-133. Clone Graph  
-200. Number of Islands  
+| # | Problem                    |
+|---|----------------------------|
+| 102 | Binary Tree Level Order Traversal |
+| 133 | Clone Graph                |
+| 200 | Number of Islands           |
 
 # DFS
 
@@ -27,10 +29,13 @@
 # Sort
 
 # Linked List
-92. Reverse Linked List II  
-141. Linked List Cycle  
-160. Intersection of Two Linked Lists  
-328. Odd Even Linked List  
+| # | Problem                    |
+|---|----------------------------|
+| 92 | Reverse Linked List II |
+| 141 | Linked List Cycle           |
+| 160 | Intersection of Two Linked Lists            |
+| 328 | Odd Even Linked List           |
+ 
 
 # Heap or Priority Queue 、Stack、Queue、Hashmap、Hashset
 
