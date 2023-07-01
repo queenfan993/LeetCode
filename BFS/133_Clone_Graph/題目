@@ -1,0 +1,34 @@
+＃難度： Medium
+
+＃題目說明：
+- 給定一個圖形，其中每個 node 都是一個題目定義的 struct 
+- 該 struct 裡面包含本身的 val 和其 struct neighbor 和 numsNeighbor 
+- 複製一個完全一樣的圖形並回傳 (deep copy) 
+
+＃ Constraints
+The number of nodes in the graph is in the range [0, 100].
+1 <= Node.val <= 100
+Node.val is unique for each node.
+
+＃例子
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+Output: [[2,4],[1,3],[2,4],[1,3]]
+意思是說第一個點的鄰居是 2,4 第二個點的鄰居是 1,3
+
+＃想法
+- 題目給定的 neighbor 就是一個 BFS 的概念
+- 透過遞迴從起點 root 開始用鄰居找到鄰居的鄰居
+- 並且用一個 hash 去避免，有重複的鄰居被建立
+ 
+＃ 時間複雜度
+O(n)，其中 n 是圖形中的 node 個數
+
+
+
+
+    
+
+
+ 
+
+

@@ -1,0 +1,31 @@
+＃難度： Medium
+
+＃題目說明： 
+- 給一顆 binary tree，要一層一層遍歷按照 depth 輸出
+
+＃ Constraints
+The number of nodes in the tree is in the range [0, 2000].
+-1000 <= Node.val <= 1000
+
+＃例子
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[9,20],[15,7]]
+
+＃想法
+- 先用遞迴找到樹有多深，depth 紀錄深度，column 紀錄每層有多少個 node
+- 拿紀錄的 depth 和 column 來設定 result calloc 的大小
+- BFS 填入 result  
+ 
+＃ 時間複雜度
+找深度會遍歷一次再印出樹也會遍歷一次
+如果以樹的規模 n，時間複雜度應該是 O(n)
+
+
+
+
+    
+
+
+ 
+
+
