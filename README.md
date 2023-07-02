@@ -13,6 +13,16 @@
 | 746 | Min cost Climbing Stairs    |
 | 1137 | N-th Tribonacci Number      |
 
+# DFS
+| # | Problem                    |
+|---|----------------------------|
+| 101 | Symmetric Tree |
+| 226 | Invert Binary Tree |
+| 236 | Lowest Common Ancestor of a Binary Tree |
+| 543 | Diameter of a Binary Tree |
+| 951 | Flip Equivalent Binary Trees |
+
+
 # BFS
 | # | Problem                    |
 |---|----------------------------|
@@ -20,7 +30,6 @@
 | 133 | Clone Graph                |
 | 200 | Number of Islands           |
 
-# DFS
 
 # Prefix Sum
 
