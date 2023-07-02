@@ -1,0 +1,42 @@
+＃難度： Medium
+
+＃題目說明： 
+- 給一棵 tree 和兩個點 p 和 q
+- 由 p 和 q 往 root 找，找到第一個 ancestor
+
+＃ Constraints
+The number of nodes in the tree is in the range [2, 10^5].
+-10^9 <= Node.val <= 10^9
+All Node.val are unique.
+p != q
+p and q will exist in the tree
+
+＃例子
+Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+Output: 5
+
+ 		   3
+       /   \
+      5     1
+     / \   / \
+    6   2 0   8
+       / \
+      7   4
+        
+＃想法
+- 只要在某個分枝發現 p 或 q 就一直回傳該 p 或 q，否則都回傳 NULL
+- 最後當某個節點，左邊不是 NULL 且右邊不是 NULL，則回傳該節點
+- 該節點會繼續被回傳上去，直到 root return 時，都還是指會有左或者右其一是非 NULL (root 就是 lowest ancestor)
+- return !left? right : (!right? left:root);
+ 
+＃ 時間複雜度
+就是遍歷所以是 O(n)
+
+
+
+    
+
+
+ 
+
+

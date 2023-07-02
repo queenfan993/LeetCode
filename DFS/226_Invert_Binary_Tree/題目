@@ -1,0 +1,32 @@
+＃難度： Easy
+
+＃題目說明： 
+- 給一棵 tree，把左右全部對調，對於每個一節點，其左右子節點對調
+
+＃ Constraints
+The number of nodes in the tree is in the range [1, 100].
+-100 <= Node.val <= 100
+
+＃例子
+Input: root = [4,2,7,1,3,6,9]
+Output: [4,7,2,9,6,3,1]
+
+
+＃想法
+- 創建函數 func 功能為對調左右子節點
+- DFS 遞迴呼叫 func(目標節點 root)
+- func(root 的左節點) 會對調 root 左子節點的左右子節點
+- func(root 的右節點) 會對調 root 右子節點的左右子節點  
+ 
+＃ 時間複雜度
+碰到 NULL 回傳，每個節點都會呼叫兩次 func，
+O(2n) = O(n)
+
+
+
+    
+
+
+ 
+
+
