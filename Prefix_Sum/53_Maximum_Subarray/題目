@@ -1,0 +1,30 @@
+＃難度： Medium
+
+＃題目說明： 
+- 給一個 array nums，找到其中元素加總最大的 sub array
+
+＃ Constraints
+1 <= nums.length <= 10^5
+-10^4 <= nums[i] <= 10^4
+
+＃例子
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+
+
+＃想法
+- 當 nums[i] 是正數時，開始紀錄總和
+- 一旦新加入的 nums[i] 會讓總和變成負，那就重新紀錄總和
+
+＃ 時間複雜度
+- 就只掃過一次 nums， O(n)
+
+
+
+
+    
+
+
+ 
+
+

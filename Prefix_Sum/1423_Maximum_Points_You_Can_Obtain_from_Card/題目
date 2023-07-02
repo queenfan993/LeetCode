@@ -1,0 +1,34 @@
+＃難度： Medium
+
+＃題目說明： 
+- 給一個 array cardPoints，每次可以從頭或尾取一張牌
+- 總共可以取 k 次，找到取得的 k 張最大加總是多少
+
+＃ Constraints
+1 <= cardPoints.length <= 10^5
+1 <= cardPoints[i] <= 10^4
+1 <= k <= cardPoints.length
+
+＃例子
+Input: cardPoints = [1,2,3,4,5,6,1], k = 3
+Output: 12，從後面挑 1 6 5 
+
+＃想法
+- 可以都從頭取，或者都從尾取，創建兩個 array prefix 和 sufix 長度都是 k + 1 (可以都從頭或都從尾取)
+- prefix[i] 表示從頭取 i 張牌的總合是多少
+- 如果 i 表示從頭取多少，則從尾巴取的就是 k - i 張卡
+- 只要找到最大的 prefix[i] + sufix[k-i] 就可以
+
+＃ 時間複雜度
+- 創建兩個 array 就是掃過 k，找到最大的 (i, k - i) 組合也是掃一遍 k
+- O(k)
+
+
+
+
+    
+
+
+ 
+
+
