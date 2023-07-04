@@ -5,14 +5,14 @@
 - 找到最長的 sub string 並且裡面出現的元素都要大於等於 k 個
 
 ＃ Constraints
-1 <= s.length <= 10^4
-s consists of only lowercase English letters.
-1 <= k <= 10^5
+- 1 <= s.length <= 10^4
+- s consists of only lowercase English letters.
+- 1 <= k <= 10^5
 
 ＃例子
-Input: s = "ababbc", k = 2
-Output: 5
-ababb 是最長的 substring 符合其中元素都大於 k
+- Input: s = "ababbc", k = 2
+- Output: 5
+- ababb 是最長的 substring 符合其中元素都大於 k
 
 ＃想法
 - 用總共有多少不同小寫字母來跑迴圈 cnt = 1 代表目前 substring 含有一種小寫字母，以此類推
@@ -23,8 +23,8 @@ ababb 是最長的 substring 符合其中元素都大於 k
 - 每走一步 end 判斷 hash 中的小寫字母是不是都大於 k，如果都大於就和當前最大值比較
  
 ＃ 時間複雜度
-跑了常數 26 次迴圈，在 26 次中跑了 n 次，並且檢查 hash 也有迴圈
-所以應該是 O(cn) = O(n)
+- 跑了常數 26 次迴圈，在 26 次中跑了 n 次，並且檢查 hash 也有迴圈
+- 所以是 O(cn) = O(n)
 
 
 

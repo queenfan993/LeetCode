@@ -8,15 +8,15 @@
 - 則可以裝水 min(height[x], height[y]) * (y-x)
 
 ＃ Constraints
-n == height.length
-2 <= n <= 10^5
-0 <= height[i] <= 10^4
+- n == height.length
+- 2 <= n <= 10^5
+- 0 <= height[i] <= 10^4
 
 ＃例子
-Input: height = [1,8,6,2,5,4,8,3,7]
-Output: 49
-以 8 和 7 這兩個擋板能形成長 7 的底
-得出 min(8,7) * 7 = 49
+- Input: height = [1,8,6,2,5,4,8,3,7]
+- Output: 49
+- 以 8 和 7 這兩個擋板能形成長 7 的底
+- 得出 min(8,7) * 7 = 49
 
 ＃想法
 - 左右端指標 i, j，朝向中間移動
@@ -24,7 +24,7 @@ Output: 49
 - 每次迴圈都紀錄當下最大值
   
 ＃ 時間複雜度
-遍歷一次 O(n)
+- 遍歷一次 O(n)
 
 
 

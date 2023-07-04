@@ -5,13 +5,13 @@
 - 回傳在 nums 中三個數字合最接近 target 的數字合 
 
 ＃ Constraints
-3 <= nums.length <= 500
--1000 <= nums[i] <= 1000
--10^4 <= target <= 10^4
+- 3 <= nums.length <= 500
+- -1000 <= nums[i] <= 1000
+- -10^4 <= target <= 10^4
 
 ＃例子
-Input: nums = [-1,2,1,-4], target = 1
-Output: 2
+- Input: nums = [-1,2,1,-4], target = 1
+- Output: 2
 
 ＃想法
 - 先 sort nums
@@ -20,7 +20,7 @@ Output: 2
 - 判斷三數是否大於小於 target，小於就移動左指標向右，反之亦然
  
 ＃ 時間複雜度
-O(n^2) 兩層迴圈
+- O(n^2) 兩層迴圈
 
 
 
