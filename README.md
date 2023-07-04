@@ -13,6 +13,20 @@
 | 746 | Min cost Climbing Stairs    |
 | 1137 | N-th Tribonacci Number      |
 
+# 2 Pointer
+| # | Problem                    |
+|---|----------------------------|
+| 1 | Two Sum |
+| 11 | Containier with Most Water |
+| 15 | 3Sum |
+| 16 | 3Sum Closest |
+| 18 | 4Sum |
+| 125 | Valid Palindrome |
+| 238 | Move Zeros |
+| 395 | Longest Substring with at Least K Repeating Characters |
+
+
+
 # DFS
 | # | Problem                    |
 |---|----------------------------|
@@ -55,4 +69,4 @@
 
 # Binary Search
 
-# 2 Pointer
+
