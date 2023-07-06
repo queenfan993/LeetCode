@@ -55,6 +55,11 @@
 # Trie
 
 # Sort
+| # | Problem                    |
+|---|----------------------------|
+| 27 | Remoce Element |
+| 56 | Merge Intervals |
+| 179 | Largest Number* |
 
 # Linked List
 | # | Problem                    |
