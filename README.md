@@ -4,14 +4,40 @@
 | # | Problem                    |
 |---|----------------------------|
 | 5 | Longest Palindromic Substring |
+| 22 | Generate Parentheses*               |
+| 45 | Jump Game II*               |
+| 53 | Maximum Subarray*           |
+| 55 | Jump Game*           |
 | 62 | Unique Paths                |
 | 64 | Minimum Path Sum            |
 | 70 | Climbing Stairs             |
+| 91 | Decode Ways*            |
+| 96 | Unique Binary Search Trees* |
+| 122 | Best Time to Buy and Sell Stock II* |
 | 198 | House Robber                |
+| 279 | Perfect Squares* |
+| 300 | Longest Increasing Subsequence* |
+| 309 | Best Time to Buy and Sell Stock with Cooldown* |
+| 322 | Coin Change* |
+| 337 | House Robber III* |
+| 377 | Combination Sum IV* |
+| 516 | Longest Palindromic Subsequence* |
+| 518 | Coin Change II* |
+| 646 | Maximum Length of Pair Chain* |
 | 673 | Number of Longest Increasing Subsequence |
+| 712 | Minimum ASCII Delete Sum for Two Strings* |
+| 714 | Best Time to Buy and Sell Stock with Transaction Fee* |
 | 740 | Delete and Earn             |
 | 746 | Min cost Climbing Stairs    |
+| 790 | Domino and Tromino Tiling* |
+| 983 | Minimum Cost For Tickets* |
+| 1027 | Longest Arithmetic Subsequence* |
+| 1035 | Uncrossed Lines* |
 | 1137 | N-th Tribonacci Number      |
+| 1143 | Longest Common Subsequence* |
+| 1218 | Longest Arithmetic Subsequence of Given Difference* |
+| 1578 | Minimum Time to Make Rope Colorful* |
+| 2140 | Solving Questions With Brainpower* |
 
 # 2 Pointer
 | # | Problem                    |
