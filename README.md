@@ -39,6 +39,16 @@
 | 1578 | Minimum Time to Make Rope Colorful* |
 | 2140 | Solving Questions With Brainpower* |
 
+# Backtracking
+| # | Problem                    |
+|---|----------------------------|
+| 46 | Permutation |
+| 78 | Subsets* |
+| 1239 | Maximum Length of a Concatenated String with Unique Characters* |
+
+
+
+
 # 2 Pointer
 | # | Problem                    |
 |---|----------------------------|
@@ -96,8 +106,5 @@
 | 328 | Odd Even Linked List           |
  
 
-# Heap or Priority Queue 、Stack、Queue、Hashmap、Hashset
-
-# Binary Search
 
 
