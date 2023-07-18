@@ -93,7 +93,7 @@
 # Sort
 | # | Problem                    |
 |---|----------------------------|
-| 27 | Remoce Element |
+| 27 | Remove Element |
 | 56 | Merge Intervals |
 | 179 | Largest Number* |
 
