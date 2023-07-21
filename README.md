@@ -11,9 +11,11 @@
 | 62 | Unique Paths                |
 | 64 | Minimum Path Sum            |
 | 70 | Climbing Stairs             |
+| 72 | Edit Distance             |
 | 91 | Decode Ways*            |
 | 96 | Unique Binary Search Trees* |
 | 122 | Best Time to Buy and Sell Stock II* |
+| 139 | Word Break* |
 | 198 | House Robber                |
 | 279 | Perfect Squares* |
 | 300 | Longest Increasing Subsequence* |
