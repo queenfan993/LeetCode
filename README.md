@@ -44,6 +44,7 @@
 # Backtracking
 | # | Problem                    |
 |---|----------------------------|
+| 17 | Letter Combinations of a Phone Number |
 | 46 | Permutation |
 | 78 | Subsets* |
 | 1239 | Maximum Length of a Concatenated String with Unique Characters* |
@@ -68,6 +69,7 @@
 # DFS
 | # | Problem                    |
 |---|----------------------------|
+| 51  | N Queens  |
 | 101 | Symmetric Tree |
 | 226 | Invert Binary Tree |
 | 236 | Lowest Common Ancestor of a Binary Tree |
