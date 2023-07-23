@@ -5,7 +5,7 @@
  */
 
 
-void permuteHelpler(int* nums, int numsSize, int** res, int curSize, int* hash, int* out, int* rIdx){  
+void permuteHelper(int* nums, int numsSize, int** res, int curSize, int* hash, int* out, int* rIdx){  
     if(curSize == numsSize) {
         for(int i = 0; i < numsSize; i++) {
             
@@ -25,7 +25,7 @@ void permuteHelpler(int* nums, int numsSize, int** res, int curSize, int* hash, 
         }
         printf("\n");
         */
-        permuteHelpler(nums, numsSize, res, curSize + 1, hash, out, rIdx);
+        permuteHelper(nums, numsSize, res, curSize + 1, hash, out, rIdx);
         hash[i] = 0;
     }
 } 
@@ -48,7 +48,7 @@ int** permute(int* nums, int numsSize, int* returnSize, int** returnColumnSizes)
 
     int* out = calloc(numsSize, sizeof(int));
     int rIdx = 0;
-    permuteHelpler(nums, numsSize, res, 0, hash, out, &rIdx);
+    permuteHelper(nums, numsSize, res, 0, hash, out, &rIdx);
     
     
     return res;

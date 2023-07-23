@@ -1,55 +1,50 @@
 /**
- * Return an array of arrays of size *returnSize.
- * The sizes of the arrays are returned as *returnColumnSizes array.
- * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
+ * Note: The returned array must be malloced, assume caller calls free().
  */
+void letterCombinationsHelper(char * digits, int* returnSize, int level, int* hash, char* out, char** res, char** str) {
+    if(level == strlen(digits)) {
+        strcpy(res[(*returnSize)++], out);
+        return; 
+    }
+
+    int number = digits[level] - '2';
+    for(int j = 0; j < strlen(str[number]); j++) {
+        if(hash[str[number][j] - 'a'] == 0) continue;
+        hash[str[number][j] - 'a']-- ;
+        out[level] = str[number][j];
+        out[level + 1] = '\0';
+        letterCombinationsHelper(digits, returnSize, level + 1, hash, out, res, str);
+        hash[str[number][j] - 'a']++;
+    }
+}
 
 
-void permuteHelpler(int* nums, int numsSize, int** res, int curSize, int* hash, int* out, int* rIdx){  
-    if(curSize == numsSize) {
-        for(int i = 0; i < numsSize; i++) {
-            
-            res[(*rIdx)][i] = out[i]; 
+char ** letterCombinations(char * digits, int* returnSize){
+    if(strlen(digits) == 0) {
+        *returnSize = 0;
+        char** res = {"0"};
+        return res; 
+    }
+    char *str[] = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    int hash[26] = {0};
+    for(int i = 0; i < strlen(digits); i++) {
+        int number = digits[i] - '2';
+        for(int j = 0; j < strlen(str[number]); j++) {
+            hash[str[number][j] - 'a']++;
         }
-        //printf("rindex: %d", *rIdx);
-        (*rIdx)++;
-        return;
-    }
-    for(int i = 0; i < numsSize; i++) {
-        if(hash[i] == 1) continue;
-        hash[i] = 1;
-        out[curSize] = nums[i];
-        /*
-        for(int j = 0; j < curSize+1; j++) {
-            printf("%d", out[j]);
-        }
-        printf("\n");
-        */
-        permuteHelpler(nums, numsSize, res, curSize + 1, hash, out, rIdx);
-        hash[i] = 0;
-    }
-} 
-
-
-int** permute(int* nums, int numsSize, int* returnSize, int** returnColumnSizes){
-    *returnSize = 1;
-    for(int i = 2; i <= numsSize; i++) {
-        (*returnSize) *= i;
     }
 
-    int** res = calloc((*returnSize), sizeof(int*));
-    *returnColumnSizes = calloc((*returnSize), sizeof(int));
-    for(int i = 0; i < (*returnSize); i++) {
-        res[i] = calloc(numsSize, sizeof(int));
-        (*returnColumnSizes)[i] = numsSize;
+    int size = 4*4*3*3;
+
+    char** res = calloc(size, sizeof(char*));
+    for(int i = 0; i < size; i++) {
+        res[i] = calloc(strlen(digits) + 1, sizeof(char));
     }
     
-    int* hash = calloc(numsSize, sizeof(int));
-
-    int* out = calloc(numsSize, sizeof(int));
-    int rIdx = 0;
-    permuteHelpler(nums, numsSize, res, 0, hash, out, &rIdx);
-    
-    
+    char* out = calloc(strlen(digits) + 1, sizeof(char));
+    *returnSize = 0;
+    letterCombinationsHelper(digits, returnSize, 0, hash, out, res, str);
+    //free(str);
+    free(out);
     return res;
 }
