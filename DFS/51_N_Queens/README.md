@@ -1,59 +1,35 @@
 ＃難度： Hard
 
 ＃題目說明： 
-- 給兩個 int sorted array，找到兩 array 的共同中位數
-- 需要在 O(log(m + n)) 裡面完成
+- 在 n * n 的棋盤上，放 n 個皇后，使皇后們彼此不攻擊對方
+- 回傳所有棋盤的組合 char***
 
 ＃例子
-- Input: nums1 = [1,3], nums2 = [2]
-- Output: 2.00000
-- Explanation: merged array = [1,2,3] and median is 2.
+- Input: n = 4
+- Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
 
 ＃ Constraints
-- nums1.length == m
-- nums2.length == n
-- 0 <= m <= 1000
-- 0 <= n <= 1000
-- 1 <= m + n <= 2000
-- -106 <= nums1[i], nums2[i] <= 106
-
-
+1 <= n <= 9
 
 ＃想法
-- 計算中位數的 index k = (nums1Size + nums2Size + 1)/2
-- k 要分成奇數偶數判斷，如果總長度是奇數那中位數的 index 是 k，如果總長偶數，中位數是 (nums[k-1] + nums[k]) /2
-- 讓 array1 長度總是小於等於 array 2 (因為後面的判斷有可能會超出陣列範圍)
-- 假如從 arry1 找到 index m1，怎麼取出一組 (x, y) = (x, k - x), 讓 k 剛好是中位數的位置
+- 用一個 int* board 去紀錄每一列的 queen 填在哪個 col 上面，index i 表示由上而下的 row
+- 遞迴的部分需要注意，怎麼去判斷，下一行 row 可以怎麼填，
+- 如果要判斷某一行 row 可不可以把皇后擺在某個 col，需要知道兩點
+1. 前面的 row 都沒有把皇后擺在 col 上面過
+2. 如果在對角線上有，那斜率會是 1， board[i] - col = 左右距離, i - row = 上下距離 
+- 所以合併就會變成下面這樣  
 ```
-nums1
-0 1 2 3 ... (m1 - 1), m1, ....
-
-nums2
-0 1 2 3 ... (m2 - 1), m2, ....
+for(int i = 0; i < row; i++) {
+    if(board[i] == col || abs(board[i] - col) == abs(i - row)){
+        return false;
+    } 
+}
 ```
-- 所以當總長度是奇數時，中位數的候選會是 nums1[m1-1] 或者 nums2[m2-1]
-- 而總長度是偶數時，左中位數的候選是 m1-1 和 m2-1，右中位數的候選是 m1 和 m2
-- 那想找到理想的 m1，表示 nums1[m1] 和 nums2[m2-1] 足夠靠近
-- 所以當 nums1[m1] < nums2[m2-1] 時，m1 應該要往右找，反之，往左找，
-- 用兩個指標 l, r 逼近找到正確的 m1 位置
-```
-while (l < r) {
-        //middle of (l, r)
-        const int m1 = l + ((r - l) / 2); 
-        const int m2 = k - m1; 
-
-        //compare with m2 - 1 	
-        if (nums1[m1] < nums2[m2 - 1])
-            l = m1 + 1; 
-        else
-            r = m1; //re-define the limit，nums[m1] > nums[m2-1]
-    }
-```
-- 最後就是透過候選的方式找到正確的數值
+- 再來就是遞迴~
 
 ＃ 時間複雜度
-- 在比較短的 array 找，並且二元搜尋
-- O(log(min(numsSize1, numsSize2)))
+- 第一行有 n 第二行有 n -1 ....
+- O(n!)
 
 
 
