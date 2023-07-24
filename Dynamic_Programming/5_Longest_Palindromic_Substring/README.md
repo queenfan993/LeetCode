@@ -8,8 +8,8 @@
 - Output: "bb"
 
 ＃ Constraints
-1 <= s.length <= 1000
-s consist of only digits and English letters.
+- 1 <= s.length <= 1000
+- s consist of only digits and English letters.
 
 
 
