@@ -1,9 +1,11 @@
 char * longestPalindrome(char * s){
     if(strlen(s) == 1) return s;
 
-    int** dp = malloc(strlen(s) * sizeof(int*));
-    for(int i = 0; i< strlen(s); i++) {
-        dp[i] = calloc(strlen(s), sizeof(int));
+    const int len = strlen(s);
+
+    int** dp = malloc(len * sizeof(int*));
+    for(int i = 0; i < len; i++) {
+        dp[i] = calloc(len, sizeof(int));
 
     }
     dp[0][0] = 1;
@@ -18,7 +20,7 @@ char * longestPalindrome(char * s){
     }else 
         dp[0][1] = 0;
 
-    for( int i = 2; i<strlen(s); i++) {
+    for( int i = 2; i < len; i++) {
         dp[i][i] = 1;
         for( int j = 0; j < i; j++) {
             if(s[i] == s[j] && (j+1) == i){
@@ -41,5 +43,11 @@ char * longestPalindrome(char * s){
     }
 
     temp[end - start + 1] = '\0';
+
+    for(int i = 0; i < len; i++) {
+        free(dp[i]);
+    }
+    free(dp);
+    
     return temp;
 }
