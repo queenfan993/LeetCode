@@ -12,8 +12,16 @@
 - s consist of only digits and English letters.
 
 
+＃想法 (Manacher)
+- 
 
-＃想法
+
+
+
+
+
+
+
 - 使用二維 dp array 紀錄起始  i 到 j 的回文長度是不是最長，如果是那就紀錄 i 和 j 
 - 從	 i = 2 和  j < i , dp[j][i] 慢慢填   
 - 起始狀態，需要先填好 dp[0][0] 、dp[0][1] 、dp[1][1]   
