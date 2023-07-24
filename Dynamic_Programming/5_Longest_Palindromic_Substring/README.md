@@ -18,10 +18,11 @@ s consist of only digits and English letters.
 - 從	 i = 2 和  j < i , dp[j][i] 慢慢填   
 
 - 狀態轉移
-- if(s[i] == s[j] && dp[j+1][i-1]!= -1){
--   dp[j][i] = dp[j+1][i-1]+2;
-- } 
- 
+'''
+if(s[i] == s[j] && dp[j+1][i-1]!= -1){
+   dp[j][i] = dp[j+1][i-1]+2;
+} 
+''' 
 - 起始狀態 
 - 需要先填好 dp[0][0] 、dp[0][1] 、dp[1][1]   
 
