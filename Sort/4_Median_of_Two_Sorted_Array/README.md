@@ -38,13 +38,11 @@ nums2
 - 用兩個指標 l, r 逼近找到正確的 m1 位置
 ```
 while (l < r) {
-		//middle of (l, r)
+        //middle of (l, r)
         const int m1 = l + ((r - l) / 2); 
-
-        //m2 is the index
         const int m2 = k - m1; 
 
-        //compare with 	
+        //compare with m2 - 1 	
         if (nums1[m1] < nums2[m2 - 1])
             l = m1 + 1; 
         else
